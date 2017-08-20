@@ -48,6 +48,32 @@ you will need the dotenv package.
 pip install python-env
 ````
 
+#### Setup instructions using Docker natively (Windows 10/Linux/Mac)
+
+This repository includes a Dockerized environment consisting of three microservices containers: 
+
+* Bowhead (PHP 7.1 with PHP FPM, Nginx, Python 2.7, Supervisor)
+* MySQL
+* Redis
+
+so you can fire it up in minutes on every machine capable of running Docker natively (Win10 & MacOS included).
+
+**Prerequisites:** Depending on your OS, the appropriate version of Docker Community Edition has to be installed on your machine.  ([Download Docker Community Edition](https://www.docker.com/community-edition#/download))
+
+**Installation steps:** 
+
+1. Clone Bowhead inside a directory with full read/write access.
+
+2. Edit `.env.example.php` with your API keys.
+
+3. Open a terminal or a command line, navigate to repository root (where `docker-compose.yml` exists) and execute the following command:
+
+    ```
+    $ docker-compose up -d
+    ```
+
+    This will download/build all the required images and start the stack containers. It usually takes a bit of time, so you can grab a cup of coffee.
+
 #### Notes
 This project was initially done in the Laravel-Lumen (lightweight) framework 
 however the move to a fully open sourced boilerplate/framework I felt that having the 
