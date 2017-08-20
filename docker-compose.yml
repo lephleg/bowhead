@@ -9,6 +9,8 @@ services:
       - ./src:/var/www/bowhead
     ports:
       - "80:80"
+      - "2049:2049"
+      - "20048:20048"
 
   bowhead-mysql:
     image: mysql
