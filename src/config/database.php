@@ -41,7 +41,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'bowhead-redis'),
+            'host' => env('DB_HOST', 'bowhead-mysql'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'bowhead'),
             'username' => env('DB_USERNAME', 'root'),
