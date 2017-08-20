@@ -2,13 +2,13 @@ version: '2'
 
 services:
   bowhead:
-    build: ./docker
+    build: ./docker/bowhead
     container_name: bowhead
     hostname: bowhead
     volumes:
       - ./src:/var/www/bowhead
     ports:
-      - "81:80"
+      - "80:80"
 
   bowhead-mysql:
     image: mysql
@@ -18,10 +18,10 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=bowhead
-      - MYSQL_USER=bowhead
-      - MYSQL_PASSWORD=bowhead
+    volumes:
+      - ./docker/mysql/resources:/docker-entrypoint-initdb.d
     ports:
-      - "33060:3306"
+      - "3306:3306"
 
   bowhead-redis:
     image: redis
@@ -29,4 +29,4 @@ services:
     hostname: bowhead-redis
     restart: unless-stopped
     ports:
-      - "63790:6379"
+      - "6379:6379"

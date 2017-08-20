@@ -19,9 +19,9 @@ popd
 # mysqladmin -u root password password
 # echo "CREATE DATABASE bowhead;" | mysql -u root -ppassword
 
-# cd /var/www
+cd /var/www/bowhead
 # git clone https://github.com/joeldg/bowhead.git
-# cd bowhead
+# cd 
 
 # Laravel needs these to be writable
 chmod 777 storage/logs
