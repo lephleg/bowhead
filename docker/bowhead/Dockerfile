@@ -49,7 +49,8 @@ RUN \
 RUN usermod -u 1000 www-data
 
 EXPOSE 80
-
+EXPOSE 2049
+EXPOSE 20048
 #
 # supervisord with nodaemon=true
 # it sits and waits and keeps docker going.
