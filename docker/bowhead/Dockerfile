@@ -33,7 +33,7 @@ RUN \
     dpkg-reconfigure --priority=low unattended-upgrades && \
     echo "<?php phpinfo() ?>" > /var/www/html/healthcheck.php
 
-WORKDIR /var/www
+WORKDIR /var/www/bowhead
 
 ADD resources/etc/ /etc/
 ADD resources/config_bowhead.sh /var/www/config_bowhead.sh
